@@ -21,14 +21,14 @@
         header {
             background-color: #1e293b;
             color: white;
-            padding: 1rem 0;
+            padding: 1.2rem 0;
             box-shadow: 0 2px 10px rgba(0,0,0,0.1);
         }
 
         .header-container {
-            max-width: 1200px;
+            max-width: 100%;
             margin: 0 auto;
-            padding: 0 2rem;
+            padding: 0 4rem;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -37,12 +37,12 @@
         .logo-area {
             display: flex;
             align-items: center;
-            gap: 1rem;
+            gap: 1.2rem;
         }
 
         .logo-placeholder {
-            width: 60px;
-            height: 60px;
+            width: 70px;
+            height: 70px;
             background-color: white;
             border-radius: 4px;
             display: flex;
@@ -50,28 +50,29 @@
             justify-content: center;
             color: #1e293b;
             font-weight: bold;
-            font-size: 0.7rem;
+            font-size: 0.8rem;
         }
 
         .logo-text h1 {
-            font-size: 1.8rem;
+            font-size: 2rem;
             margin-bottom: 0.2rem;
         }
 
         .logo-text p {
-            font-size: 0.9rem;
+            font-size: 1rem;
             color: #cbd5e1;
         }
 
         nav {
             display: flex;
-            gap: 2rem;
+            gap: 2.5rem;
         }
 
         nav a {
             color: white;
             text-decoration: none;
             font-weight: 500;
+            font-size: 1.1rem;
             transition: color 0.3s;
         }
 
@@ -81,41 +82,44 @@
 
         /* Hero Section */
         .hero {
-            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
-                        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 400"><rect fill="%23334155" width="1200" height="400"/></svg>');
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
+            url('imagem-jato.jpg');
             background-size: cover;
             background-position: center;
-            height: 500px;
+            min-height: 550px;
             display: flex;
             align-items: center;
             color: white;
+            width: 100%;
         }
 
         .hero-content {
-            max-width: 1200px;
+            max-width: 100%;
             margin: 0 auto;
-            padding: 0 2rem;
+            padding: 0 4rem;
+            width: 100%;
         }
 
         .hero h2 {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-            max-width: 800px;
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
+            max-width: 900px;
+            line-height: 1.2;
         }
 
         .hero p {
-            font-size: 1.3rem;
-            margin-bottom: 2rem;
-            max-width: 700px;
+            font-size: 1.5rem;
+            margin-bottom: 2.5rem;
+            max-width: 800px;
         }
 
         .btn-primary {
             background-color: #2563eb;
             color: white;
-            padding: 1rem 2rem;
+            padding: 1.2rem 2.5rem;
             border: none;
             border-radius: 4px;
-            font-size: 1rem;
+            font-size: 1.1rem;
             font-weight: 600;
             cursor: pointer;
             text-decoration: none;
@@ -129,9 +133,8 @@
 
         /* Sections */
         .section {
-            padding: 4rem 2rem;
-            max-width: 1200px;
-            margin: 0 auto;
+            padding: 5rem 4rem;
+            width: 100%;
         }
 
         .section-white {
@@ -144,46 +147,50 @@
 
         .section-title {
             text-align: center;
-            font-size: 2.5rem;
-            margin-bottom: 3rem;
+            font-size: 3rem;
+            margin-bottom: 4rem;
             color: #1e293b;
         }
 
         /* Cards Grid */
         .cards-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2.5rem;
+            max-width: 100%;
+            margin: 0 auto;
+            padding: 0 2rem;
         }
 
         .card {
             background-color: #f1f5f9;
-            padding: 2rem;
+            padding: 2.5rem;
             border-radius: 8px;
         }
 
         .card-icon {
-            width: 50px;
-            height: 50px;
+            width: 60px;
+            height: 60px;
             background-color: #2563eb;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            margin-bottom: 1rem;
+            margin-bottom: 1.5rem;
             color: white;
-            font-size: 1.5rem;
+            font-size: 1.8rem;
         }
 
         .card h3 {
-            font-size: 1.5rem;
-            margin-bottom: 1rem;
+            font-size: 1.8rem;
+            margin-bottom: 1.2rem;
             color: #1e293b;
         }
 
         .card p, .card ul {
             color: #475569;
             line-height: 1.8;
+            font-size: 1.05rem;
         }
 
         .card ul {
@@ -192,28 +199,29 @@
         }
 
         .card ul li {
-            margin-bottom: 0.5rem;
+            margin-bottom: 0.6rem;
         }
 
         /* Services */
         .services-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 2rem;
-            max-width: 900px;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 3rem;
+            max-width: 100%;
             margin: 0 auto;
+            padding: 0 4rem;
         }
 
         .service-card {
             background-color: white;
-            padding: 2rem;
+            padding: 3rem;
             border-radius: 8px;
             box-shadow: 0 4px 6px rgba(0,0,0,0.1);
         }
 
         .service-card h3 {
-            font-size: 1.5rem;
-            margin-bottom: 1rem;
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
             color: #1e293b;
         }
 
@@ -223,36 +231,39 @@
         }
 
         .service-card ul li {
-            margin-bottom: 0.5rem;
+            margin-bottom: 0.8rem;
+            font-size: 1.1rem;
         }
 
         /* Contact Section */
         .contact-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 3rem;
-            max-width: 1100px;
+            gap: 4rem;
+            max-width: 100%;
             margin: 0 auto;
+            padding: 0 2rem;
         }
 
         .form-group {
-            margin-bottom: 1.5rem;
+            margin-bottom: 1.8rem;
         }
 
         .form-group label {
             display: block;
             font-weight: 600;
-            margin-bottom: 0.5rem;
+            margin-bottom: 0.6rem;
             color: #1e293b;
+            font-size: 1.1rem;
         }
 
         .form-group input,
         .form-group textarea {
             width: 100%;
-            padding: 0.8rem;
+            padding: 1rem;
             border: 1px solid #cbd5e1;
             border-radius: 4px;
-            font-size: 1rem;
+            font-size: 1.05rem;
             font-family: inherit;
         }
 
@@ -264,36 +275,38 @@
 
         .contact-info {
             background-color: #f1f5f9;
-            padding: 2rem;
+            padding: 2.5rem;
             border-radius: 8px;
         }
 
         .contact-info h3 {
-            font-size: 1.3rem;
-            margin-bottom: 1.5rem;
+            font-size: 1.6rem;
+            margin-bottom: 2rem;
             color: #1e293b;
         }
 
         .contact-item {
             display: flex;
-            gap: 1rem;
-            margin-bottom: 1.5rem;
+            gap: 1.2rem;
+            margin-bottom: 2rem;
         }
 
         .contact-icon {
             color: #2563eb;
-            font-size: 1.2rem;
+            font-size: 1.4rem;
             margin-top: 0.2rem;
         }
 
         .contact-details p {
-            margin-bottom: 0.3rem;
+            margin-bottom: 0.4rem;
             color: #475569;
+            font-size: 1.05rem;
         }
 
         .contact-details .label {
             font-weight: 600;
             color: #1e293b;
+            font-size: 1.1rem;
         }
 
         .map-container {
@@ -301,7 +314,7 @@
             border-radius: 8px;
             overflow: hidden;
             box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-            height: 300px;
+            height: 350px;
         }
 
         .map-container iframe {
@@ -314,21 +327,23 @@
         footer {
             background-color: #1e293b;
             color: white;
-            padding: 2rem;
+            padding: 2.5rem;
             text-align: center;
         }
 
         footer p {
-            margin-bottom: 0.5rem;
+            margin-bottom: 0.6rem;
+            font-size: 1.05rem;
         }
 
         .footer-company {
             color: #cbd5e1;
+            font-size: 1.1rem;
         }
 
         .footer-cnpj {
             color: #94a3b8;
-            font-size: 0.9rem;
+            font-size: 1rem;
         }
 
         .footer-copyright {
@@ -337,26 +352,53 @@
         }
 
         /* Responsive */
+        @media (max-width: 1200px) {
+            .cards-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
         @media (max-width: 768px) {
             .header-container {
                 flex-direction: column;
                 gap: 1rem;
+                padding: 0 2rem;
             }
 
             nav {
                 gap: 1rem;
             }
 
+            .hero {
+                min-height: 400px;
+            }
+
+            .hero-content {
+                padding: 0 2rem;
+            }
+
             .hero h2 {
-                font-size: 2rem;
+                font-size: 2.2rem;
             }
 
             .hero p {
-                font-size: 1.1rem;
+                font-size: 1.2rem;
+            }
+
+            .section {
+                padding: 3rem 2rem;
             }
 
             .contact-grid {
                 grid-template-columns: 1fr;
+            }
+
+            .services-grid {
+                padding: 0 1rem;
             }
         }
     </style>
@@ -366,7 +408,7 @@
     <header>
         <div class="header-container">
             <div class="logo-area">
-                <div class="logo-placeholder">LOGO</div>
+                <img src="logo.png" alt="ST Jato Logo" style="width: 70px; height: 70px; border-radius: 4px;">
                 <div class="logo-text">
                     <h1>ST Jato</h1>
                     <p>Jateamento e Pintura Industrial</p>
@@ -459,7 +501,7 @@
                     </div>
                     <div class="form-group">
                         <label>Mensagem</label>
-                        <textarea rows="4" placeholder="Descreva seu projeto ou necessidade" required></textarea>
+                        <textarea rows="5" placeholder="Descreva seu projeto ou necessidade" required></textarea>
                     </div>
                     <button type="submit" class="btn-primary" style="width: 100%;">Enviar Mensagem</button>
                 </form>
