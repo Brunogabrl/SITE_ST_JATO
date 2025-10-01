@@ -43,14 +43,15 @@
         .logo-placeholder {
             width: 70px;
             height: 70px;
-            background-color: white;
-            border-radius: 4px;
             display: flex;
             align-items: center;
             justify-content: center;
-            color: #1e293b;
-            font-weight: bold;
-            font-size: 0.8rem;
+        }
+        
+        .logo-placeholder img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
         }
 
         .logo-text h1 {
@@ -81,16 +82,25 @@
         }
 
         /* Hero Section */
-     .hero {
-    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
-            url('imagem-jato.jpg');
+        .hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
+                        url('imagem-jato.jpg');
             background-size: cover;
-            background-position: center;
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-attachment: scroll;
             min-height: 550px;
             display: flex;
             align-items: center;
             color: white;
             width: 100%;
+        }
+        
+        /* Ajuste para telas maiores */
+        @media (min-width: 1400px) {
+            .hero {
+                min-height: 650px;
+            }
         }
 
         .hero-content {
@@ -408,7 +418,9 @@
     <header>
         <div class="header-container">
             <div class="logo-area">
-                <img src="logo.jpg" alt="ST Jato Logo" style="width: 70px; height: 70px; border-radius: 4px;">
+                <div class="logo-placeholder">
+                    <img src="logo.png" alt="ST Jato Logo">
+                </div>
                 <div class="logo-text">
                     <h1>ST Jato</h1>
                     <p>Jateamento e Pintura Industrial</p>
