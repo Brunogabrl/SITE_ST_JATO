@@ -81,7 +81,7 @@
         }
 
         /* Hero Section */
-        .hero {
+     .hero {
     background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
             url('imagem-jato.jpg');
             background-size: cover;
@@ -408,7 +408,7 @@
     <header>
         <div class="header-container">
             <div class="logo-area">
-                <img src="logo.png" alt="ST Jato Logo" style="width: 70px; height: 70px; border-radius: 4px;">
+                <img src="logo.jpg" alt="ST Jato Logo" style="width: 70px; height: 70px; border-radius: 4px;">
                 <div class="logo-text">
                     <h1>ST Jato</h1>
                     <p>Jateamento e Pintura Industrial</p>
@@ -486,22 +486,22 @@
         <div class="contact-grid">
             <!-- Formulário -->
             <div>
-                <form onsubmit="event.preventDefault(); alert('Formulário enviado! Entraremos em contato em breve.'); this.reset();">
+                <form action="https://formspree.io/f/mzzjgbbj" method="POST">
                     <div class="form-group">
                         <label>Nome</label>
-                        <input type="text" placeholder="Seu nome completo" required>
+                        <input type="text" name="nome" placeholder="Seu nome completo" required>
                     </div>
                     <div class="form-group">
                         <label>E-mail</label>
-                        <input type="email" placeholder="seu@email.com" required>
+                        <input type="email" name="email" placeholder="seu@email.com" required>
                     </div>
                     <div class="form-group">
                         <label>Telefone</label>
-                        <input type="tel" placeholder="(71) 99965-4856" required>
+                        <input type="tel" name="telefone" placeholder="(71) 99965-4856" required>
                     </div>
                     <div class="form-group">
                         <label>Mensagem</label>
-                        <textarea rows="5" placeholder="Descreva seu projeto ou necessidade" required></textarea>
+                        <textarea rows="5" name="mensagem" placeholder="Descreva seu projeto ou necessidade" required></textarea>
                     </div>
                     <button type="submit" class="btn-primary" style="width: 100%;">Enviar Mensagem</button>
                 </form>
