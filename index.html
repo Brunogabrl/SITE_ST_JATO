@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ST Jato - Jateamento e Pintura Industrial</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        /* Header */
+        header {
+            background-color: #1e293b;
+            color: white;
+            padding: 1rem 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .header-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo-area {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .logo-placeholder {
+            width: 60px;
+            height: 60px;
+            background-color: white;
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #1e293b;
+            font-weight: bold;
+            font-size: 0.7rem;
+        }
+
+        .logo-text h1 {
+            font-size: 1.8rem;
+            margin-bottom: 0.2rem;
+        }
+
+        .logo-text p {
+            font-size: 0.9rem;
+            color: #cbd5e1;
+        }
+
+        nav {
+            display: flex;
+            gap: 2rem;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #60a5fa;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
+                        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 400"><rect fill="%23334155" width="1200" height="400"/></svg>');
+            background-size: cover;
+            background-position: center;
+            height: 500px;
+            display: flex;
+            align-items: center;
+            color: white;
+        }
+
+        .hero-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .hero h2 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            max-width: 800px;
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            max-width: 700px;
+        }
+
+        .btn-primary {
+            background-color: #2563eb;
+            color: white;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 4px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            transition: background-color 0.3s;
+        }
+
+        .btn-primary:hover {
+            background-color: #1d4ed8;
+        }
+
+        /* Sections */
+        .section {
+            padding: 4rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-white {
+            background-color: white;
+        }
+
+        .section-gray {
+            background-color: #f1f5f9;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: #1e293b;
+        }
+
+        /* Cards Grid */
+        .cards-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .card {
+            background-color: #f1f5f9;
+            padding: 2rem;
+            border-radius: 8px;
+        }
+
+        .card-icon {
+            width: 50px;
+            height: 50px;
+            background-color: #2563eb;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1rem;
+            color: white;
+            font-size: 1.5rem;
+        }
+
+        .card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: #1e293b;
+        }
+
+        .card p, .card ul {
+            color: #475569;
+            line-height: 1.8;
+        }
+
+        .card ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .card ul li {
+            margin-bottom: 0.5rem;
+        }
+
+        /* Services */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .service-card {
+            background-color: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .service-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: #1e293b;
+        }
+
+        .service-card ul {
+            list-style: none;
+            color: #475569;
+        }
+
+        .service-card ul li {
+            margin-bottom: 0.5rem;
+        }
+
+        /* Contact Section */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: #1e293b;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.8rem;
+            border: 1px solid #cbd5e1;
+            border-radius: 4px;
+            font-size: 1rem;
+            font-family: inherit;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #2563eb;
+        }
+
+        .contact-info {
+            background-color: #f1f5f9;
+            padding: 2rem;
+            border-radius: 8px;
+        }
+
+        .contact-info h3 {
+            font-size: 1.3rem;
+            margin-bottom: 1.5rem;
+            color: #1e293b;
+        }
+
+        .contact-item {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .contact-icon {
+            color: #2563eb;
+            font-size: 1.2rem;
+            margin-top: 0.2rem;
+        }
+
+        .contact-details p {
+            margin-bottom: 0.3rem;
+            color: #475569;
+        }
+
+        .contact-details .label {
+            font-weight: 600;
+            color: #1e293b;
+        }
+
+        .map-container {
+            margin-top: 2rem;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            height: 300px;
+        }
+
+        .map-container iframe {
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #1e293b;
+            color: white;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        footer p {
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-company {
+            color: #cbd5e1;
+        }
+
+        .footer-cnpj {
+            color: #94a3b8;
+            font-size: 0.9rem;
+        }
+
+        .footer-copyright {
+            color: #94a3b8;
+            margin-top: 1rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header-container {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            nav {
+                gap: 1rem;
+            }
+
+            .hero h2 {
+                font-size: 2rem;
+            }
+
+            .hero p {
+                font-size: 1.1rem;
+            }
+
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-container">
+            <div class="logo-area">
+                <div class="logo-placeholder">LOGO</div>
+                <div class="logo-text">
+                    <h1>ST Jato</h1>
+                    <p>Jateamento e Pintura Industrial</p>
+                </div>
+            </div>
+            <nav>
+                <a href="#home">Início</a>
+                <a href="#sobre">Sobre</a>
+                <a href="#servicos">Serviços</a>
+                <a href="#contato">Contato</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h2>Excelência em Jateamento e Pintura Industrial</h2>
+            <p>Soluções profissionais para a indústria petroquímica e siderúrgica</p>
+            <a href="#contato" class="btn-primary">Solicite um Orçamento</a>
+        </div>
+    </section>
+
+    <!-- Sobre a Empresa -->
+    <section id="sobre" class="section section-white">
+        <div class="cards-grid">
+            <div class="card">
+                <div class="card-icon">✓</div>
+                <h3>Missão</h3>
+                <p>Fornecer serviços de jateamento e pintura industrial de alta qualidade, garantindo proteção, durabilidade e acabamento superior para estruturas metálicas, atendendo aos mais rigorosos padrões da indústria.</p>
+            </div>
+            <div class="card">
+                <div class="card-icon">★</div>
+                <h3>Visão</h3>
+                <p>Ser referência nacional em jateamento e pintura industrial, reconhecida pela excelência técnica, compromisso com prazos e segurança operacional, expandindo nossa atuação no setor petroquímico e industrial.</p>
+            </div>
+            <div class="card">
+                <div class="card-icon">◆</div>
+                <h3>Valores</h3>
+                <p>Qualidade profissional, segurança do trabalho, cumprimento de prazos, responsabilidade ambiental, capacitação técnica contínua e compromisso com a satisfação do cliente.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Serviços -->
+    <section id="servicos" class="section section-gray">
+        <h2 class="section-title">Nossos Serviços</h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <h3>Jateamento Abrasivo</h3>
+                <ul>
+                    <li>• Jateamento com granalha de aço</li>
+                    <li>• Preparação de superfície para pintura</li>
+                    <li>• Remoção de ferrugem e oxidação</li>
+                    <li>• Tratamento de estruturas metálicas</li>
+                    <li>• Conforme normas ABNT e NACE</li>
+                </ul>
+            </div>
+            <div class="service-card">
+                <h3>Pintura Industrial</h3>
+                <ul>
+                    <li>• Pintura anticorrosiva</li>
+                    <li>• Sistemas epóxi e poliuretano</li>
+                    <li>• Pintura intumescente</li>
+                    <li>• Revestimentos especiais</li>
+                    <li>• Acabamento de alta durabilidade</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contato -->
+    <section id="contato" class="section section-white">
+        <h2 class="section-title">Entre em Contato</h2>
+        <div class="contact-grid">
+            <!-- Formulário -->
+            <div>
+                <form onsubmit="event.preventDefault(); alert('Formulário enviado! Entraremos em contato em breve.'); this.reset();">
+                    <div class="form-group">
+                        <label>Nome</label>
+                        <input type="text" placeholder="Seu nome completo" required>
+                    </div>
+                    <div class="form-group">
+                        <label>E-mail</label>
+                        <input type="email" placeholder="seu@email.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Telefone</label>
+                        <input type="tel" placeholder="(71) 99965-4856" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Mensagem</label>
+                        <textarea rows="4" placeholder="Descreva seu projeto ou necessidade" required></textarea>
+                    </div>
+                    <button type="submit" class="btn-primary" style="width: 100%;">Enviar Mensagem</button>
+                </form>
+            </div>
+
+            <!-- Informações e Mapa -->
+            <div>
+                <div class="contact-info">
+                    <h3>Informações de Contato</h3>
+                    <div class="contact-item">
+                        <div class="contact-icon">📍</div>
+                        <div class="contact-details">
+                            <p class="label">Endereço</p>
+                            <p>Via Frontal - Polo Petroquímico</p>
+                            <p>Camaçari - BA, 42810-320</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">📞</div>
+                        <div class="contact-details">
+                            <p class="label">Telefone</p>
+                            <p>(71) 99965-4856</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">✉</div>
+                        <div class="contact-details">
+                            <p class="label">E-mail</p>
+                            <p>brunogabrltr@gmail.com</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="map-container">
+                    <iframe 
+                        src="https://www.google.com/maps?q=-12.624753210827981,-38.32009695088739&hl=pt-BR&z=15&output=embed"
+                        allowfullscreen
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p class="footer-company">St Jato Jateamento e Pintura LTDA</p>
+        <p class="footer-cnpj">CNPJ: 24.002.497/0001-45</p>
+        <p class="footer-copyright">Copyright © 2025 - ST Jato</p>
+    </footer>
+</body>
+</html>
